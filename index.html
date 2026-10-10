@@ -3,98 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BUTT CO — Next-Generation Cyber Systems</title>
-<meta name="description" content="BUTT CO builds secure neural interfaces, quantum power cores and stealth networking for the modern megacity.">
+<title>BUTT CO — Enter the Tournament</title>
+<meta name="description" content="BUTT CO: a fighting-game styled company site. Choose your fighter, build your arsenal, win the round.">
 <link rel="icon" href="assets/logo.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-round"><span>ROUND</span><b>1</b></div>
+  <div class="intro-fight">FIGHT!</div>
+</div>
+<canvas id="embers" aria-hidden="true"></canvas>
+<div class="flash" id="flash" aria-hidden="true"></div>
+
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="30" height="30"><span>BUTT<b>CO</b></span></a>
     <button class="burger" aria-label="Menu" aria-expanded="false" id="burger"><i></i><i></i><i></i></button>
     <nav id="menu">
-      <a href="#solutions">Solutions</a>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#testimonials">Customers</a>
-      <a href="http://techlynxoverdrive.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Visit TechLynx Overdrive</a>
+      <a href="#fighters">Fighters</a>
+      <a href="#arsenal">Arsenal</a>
+      <a href="#stats">Match Stats</a>
+      <a href="#rivals">Rivals</a>
+      <a href="http://techlynxoverdrive.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer"><span>Visit TechLynx Overdrive</span></a>
     </nav>
   </div>
 </header>
 
 <main id="top">
   <section class="hero">
-    <div class="wrap hero-in">
+    <div class="hud wrap" aria-label="Match status">
+      <div class="side p1"><span class="name">BUTT CO</span><div class="bar"><i class="ghost"></i><i class="fill"></i></div></div>
+      <div class="timer" id="timer">99</div>
+      <div class="side p2"><span class="name">THE COMPETITION</span><div class="bar"><i class="ghost"></i><i class="fill"></i></div></div>
+    </div>
+
+    <div class="wrap stage">
+      <svg class="fighter f1" viewBox="0 0 200 320" aria-hidden="true">
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc400"/><stop offset="1" stop-color="#e10600"/></linearGradient></defs>
+        <g class="body" fill="url(#g1)">
+          <circle cx="100" cy="40" r="22"/>
+          <path d="M68 70h64l10 100H58z"/>
+          <path class="arm back" d="M70 75 38 128l22 12 28-46z"/>
+          <path d="M65 170h32l-6 140H58z"/><path d="M103 170h32l17 140h-32z"/>
+          <path class="arm front" d="M130 75l48 22-6 20-48-14z"/>
+        </g>
+      </svg>
+
       <div class="hero-copy">
-        <span class="eyebrow">Secure systems for the modern megacity</span>
-        <h1>Engineering the <em>future</em> of connected intelligence.</h1>
-        <p class="lead">BUTT CO designs neural interfaces, quantum power infrastructure and stealth networking trusted by operators across the sprawl.</p>
+        <span class="eyebrow">Iron-fist engineering since 2051</span>
+        <h1><span>Enter the</span> <em>Tournament</em></h1>
+        <p class="lead">BUTT CO builds the neural, power and stealth systems that win rounds. Pick your fighter. Own the arena.</p>
         <div class="cta">
-          <a href="#contact" class="btn">Get started</a>
-          <a href="#solutions" class="btn btn-ghost">Explore solutions</a>
-          <a href="http://techlynxoverdrive.com/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Visit TechLynx Overdrive ↗</a>
+          <a href="#fighters" class="btn"><span>Select fighter</span></a>
+          <a href="http://techlynxoverdrive.com/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer"><span>Visit TechLynx Overdrive ↗</span></a>
         </div>
-        <ul class="trust">
-          <li><b>99.99%</b> uptime</li>
-          <li><b>256-bit</b> encryption</li>
-          <li><b>24/7</b> operations</li>
-        </ul>
       </div>
-      <div class="hero-art"><img src="assets/skyline.svg" alt="Neon city skyline at night"></div>
+
+      <svg class="fighter f2" viewBox="0 0 200 320" aria-hidden="true">
+        <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ab4ff"/><stop offset="1" stop-color="#2a2f6b"/></linearGradient></defs>
+        <g class="body" fill="url(#g2)">
+          <circle cx="100" cy="40" r="22"/>
+          <path d="M68 70h64l10 100H58z"/>
+          <path class="arm back" d="M70 75 38 128l22 12 28-46z"/>
+          <path d="M65 170h32l-6 140H58z"/><path d="M103 170h32l17 140h-32z"/>
+          <path class="arm front" d="M130 75l48 22-6 20-48-14z"/>
+        </g>
+      </svg>
+      <div class="ko" aria-hidden="true">K.O.</div>
     </div>
+    <div class="floor" aria-hidden="true"></div>
   </section>
 
-  <section class="logos" aria-label="Trusted by">
+  <section id="fighters" class="section">
     <div class="wrap">
-      <p>Trusted by teams at</p>
-      <div class="logo-row"><span>ARASAKA</span><span>MILITECH</span><span>KANG TAO</span><span>NETWATCH</span><span>BIOTECH</span></div>
-    </div>
-  </section>
-
-  <section id="solutions" class="section">
-    <div class="wrap">
-      <header class="sec-head"><span class="eyebrow">Solutions</span><h2>Everything you need to operate in the dark.</h2><p>Four integrated platforms, engineered to work together or deploy on their own.</p></header>
+      <header class="sec-head"><span class="eyebrow">Character select</span><h2>Choose your fighter</h2><p>Four platforms. Each one built to win on its own, unstoppable together.</p></header>
       <div class="grid g4">
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div><h3>Neural Link</h3><p>Low-latency brain-computer interface with end-to-end encrypted signal routing.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Quantum Core</h3><p>High-density power cells with self-healing grid failover for critical sites.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Ghost Protocol</h3><p>Adaptive intrusion defence and trace-free networking, monitored around the clock.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Holo Display</h3><p>Volumetric visualisation for command centres, retail and public spaces.</p></article>
+        <article class="card"><span class="rank">01</span><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div><h3>Neural Link</h3><p>Low-latency brain-computer interface. Think it, land it.</p><div class="meter"><span>SPEED</span><i style="--v:95%"></i></div><div class="meter"><span>POWER</span><i style="--v:70%"></i></div></article>
+        <article class="card"><span class="rank">02</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Quantum Core</h3><p>Self-healing power cells that never drop the guard.</p><div class="meter"><span>SPEED</span><i style="--v:60%"></i></div><div class="meter"><span>POWER</span><i style="--v:98%"></i></div></article>
+        <article class="card"><span class="rank">03</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Ghost Protocol</h3><p>Adaptive defence and trace-free networking. Untouchable.</p><div class="meter"><span>SPEED</span><i style="--v:80%"></i></div><div class="meter"><span>POWER</span><i style="--v:85%"></i></div></article>
+        <article class="card"><span class="rank">04</span><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Holo Display</h3><p>Volumetric visuals that own the whole arena.</p><div class="meter"><span>SPEED</span><i style="--v:75%"></i></div><div class="meter"><span>POWER</span><i style="--v:65%"></i></div></article>
       </div>
     </div>
   </section>
 
-  <section id="products" class="section alt">
+  <section id="arsenal" class="section alt">
     <div class="wrap">
-      <header class="sec-head"><span class="eyebrow">Products</span><h2>Hardware built to be relied on.</h2><p>Flagship units from the BUTT CO lineup. Volume pricing available.</p></header>
+      <header class="sec-head"><span class="eyebrow">Arsenal</span><h2>Gear up for battle</h2><p>Flagship hardware. Volume pricing for full squads.</p></header>
       <div class="grid g3">
-        <article class="card product"><div class="badge">Bestseller</div><h3>Cyberdeck Z9</h3><p>12-core quantum rig in a hand-finished chassis.</p><div class="row"><span class="price">¥9,800</span><a href="#contact" class="btn btn-sm btn-ghost">Enquire</a></div></article>
-        <article class="card product"><div class="badge">New</div><h3>Optic Mk.IV</h3><p>Thermal, zoom and targeting overlay in a compact optic.</p><div class="row"><span class="price">¥2,750</span><a href="#contact" class="btn btn-sm btn-ghost">Enquire</a></div></article>
-        <article class="card product"><div class="badge">Pro</div><h3>Mono-Blade X</h3><p>Monofilament edge tooling with silent retraction.</p><div class="row"><span class="price">¥4,200</span><a href="#contact" class="btn btn-sm btn-ghost">Enquire</a></div></article>
+        <article class="card product"><div class="badge">Bestseller</div><h3>Cyberdeck Z9</h3><p>12-core quantum rig in a hand-finished chassis.</p><div class="row"><span class="price">¥9,800</span><a href="#contact" class="btn btn-sm btn-ghost"><span>Enquire</span></a></div></article>
+        <article class="card product"><div class="badge">New</div><h3>Optic Mk.IV</h3><p>Thermal, zoom and targeting overlay in a compact optic.</p><div class="row"><span class="price">¥2,750</span><a href="#contact" class="btn btn-sm btn-ghost"><span>Enquire</span></a></div></article>
+        <article class="card product"><div class="badge">Pro</div><h3>Mono-Blade X</h3><p>Monofilament edge tooling with silent retraction.</p><div class="row"><span class="price">¥4,200</span><a href="#contact" class="btn btn-sm btn-ghost"><span>Enquire</span></a></div></article>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section">
+  <section id="stats" class="section">
     <div class="wrap about">
       <div>
-        <span class="eyebrow">About BUTT CO</span>
-        <h2>Built in the city that never switches off.</h2>
-        <p>Since 2051 we have shipped secure, reliable technology to operators who cannot afford downtime. Our engineers, security researchers and designers work as one team to turn hard problems into dependable products.</p>
-        <ul class="ticks"><li>ISO-grade security practices</li><li>Dedicated support engineers</li><li>Global logistics and on-site installation</li></ul>
+        <span class="eyebrow">Match stats</span>
+        <h2>Undefeated in the city that never sleeps</h2>
+        <p>Operators trust BUTT CO because we never drop a round. Dedicated engineers, global logistics and on-site installation keep your squad in the fight.</p>
+        <div class="combo"><b id="combo" data-count="128">0</b><span>HIT COMBO</span></div>
       </div>
       <div class="stats">
         <div><b data-count="9400000">0</b><span>Citizens served</span></div>
         <div><b data-count="1337">0</b><span>Enterprise clients</span></div>
-        <div><b data-count="26">0</b><span>Years of operation</span></div>
+        <div><b data-count="26">0</b><span>Years in the ring</span></div>
         <div><b data-count="48">0</b><span>Districts covered</span></div>
       </div>
     </div>
   </section>
 
-  <section id="testimonials" class="section alt">
+  <section id="rivals" class="section alt">
     <div class="wrap">
-      <header class="sec-head"><span class="eyebrow">Customers</span><h2>What operators say.</h2></header>
+      <header class="sec-head"><span class="eyebrow">Rival reviews</span><h2>Challengers speak</h2></header>
       <div class="grid g3">
         <figure class="card quote"><blockquote>“We cut incident response time in half after moving to Ghost Protocol.”</blockquote><figcaption><b>R. Vance</b><span>Head of Security, Netwatch</span></figcaption></figure>
         <figure class="card quote"><blockquote>“Quantum Core kept our district online through three blackouts.”</blockquote><figcaption><b>M. Okafor</b><span>Infrastructure Lead, Kang Tao</span></figcaption></figure>
@@ -106,15 +129,15 @@
   <section id="contact" class="section">
     <div class="wrap contact">
       <div>
-        <span class="eyebrow">Contact</span>
-        <h2>Request access to the platform.</h2>
-        <p>Tell us about your deployment and a solutions engineer will reply within one business day.</p>
+        <span class="eyebrow">Register</span>
+        <h2>Join the tournament</h2>
+        <p>Tell us about your squad. A solutions engineer replies within one business day.</p>
       </div>
       <form class="form" id="form" novalidate>
-        <label>Name<input name="name" type="text" placeholder=" " required autocomplete="name"></label>
+        <label>Fighter name<input name="name" type="text" placeholder=" " required autocomplete="name"></label>
         <label>Work email<input name="email" type="email" placeholder=" " required autocomplete="email"></label>
-        <label>How can we help?<textarea name="msg" rows="4"></textarea></label>
-        <button class="btn" type="submit">Send request</button>
+        <label>Your challenge<textarea name="msg" rows="4"></textarea></label>
+        <button class="btn" type="submit"><span>Send request</span></button>
         <p id="msg" class="msg" role="status"></p>
       </form>
     </div>
@@ -123,12 +146,12 @@
 
 <footer class="footer">
   <div class="wrap foot-in">
-    <div><a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="26" height="26"><span>BUTT<b>CO</b></span></a><p>Secure systems for the modern megacity.</p></div>
-    <div><h4>Company</h4><a href="#about">About</a><a href="#testimonials">Customers</a><a href="#contact">Contact</a></div>
-    <div><h4>Solutions</h4><a href="#solutions">Neural Link</a><a href="#solutions">Quantum Core</a><a href="#solutions">Ghost Protocol</a></div>
-    <div><h4>Legal</h4><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Security</a></div>
+    <div><a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="26" height="26"><span>BUTT<b>CO</b></span></a><p>Win every round.</p></div>
+    <div><h4>Company</h4><a href="#stats">Match stats</a><a href="#rivals">Rivals</a><a href="#contact">Contact</a></div>
+    <div><h4>Fighters</h4><a href="#fighters">Neural Link</a><a href="#fighters">Quantum Core</a><a href="#fighters">Ghost Protocol</a></div>
+    <div><h4>Partners</h4><a href="http://techlynxoverdrive.com/" target="_blank" rel="noopener noreferrer">TechLynx Overdrive</a></div>
   </div>
-  <div class="wrap copy">© 2077 BUTT CO. All rights reserved.</div>
+  <div class="wrap copy">© 2077 BUTT CO. All rights reserved. Not affiliated with any game publisher.</div>
 </footer>
 <script src="js/main.js"></script>
 </body>
