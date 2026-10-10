@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEON//GRID — Cyberpunk</title>
+<link rel="icon" href="assets/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand glitch" data-text="NEON//GRID" href="#top"><img src="assets/logo.svg" alt="" width="28" height="28">NEON//GRID</a>
+  <nav>
+    <a href="#features">Systems</a>
+    <a href="#gear">Gear</a>
+    <a href="#city">Night City</a>
+    <a href="#join" class="btn small">Jack In</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="tag">// SYSTEM ONLINE · 2077</p>
+    <h1 class="glitch" data-text="WAKE UP, SAMURAI">WAKE UP, SAMURAI</h1>
+    <p class="sub">The city never sleeps. Neither do we. Upgrade your chrome, hack the grid, and own the night.</p>
+    <div class="cta">
+      <a href="#join" class="btn">Enter the Grid</a>
+      <a href="#features" class="btn alt">Explore</a>
+    </div>
+    <p class="typing" id="typing"></p>
+  </section>
+
+  <section id="features">
+    <h2><span>01</span> Systems</h2>
+    <div class="grid">
+      <article class="card"><div class="icon">⌬</div><h3>Neural Link</h3><p>Zero-latency interface straight into your cortex. Think it, and the net obeys.</p></article>
+      <article class="card"><div class="icon">⚡</div><h3>Quantum Core</h3><p>Overclocked power cells that outlast any blackout in the sprawl.</p></article>
+      <article class="card"><div class="icon">☢</div><h3>Ghost Protocol</h3><p>Military-grade ICE-breaking and trace-wiping. Leave no footprint.</p></article>
+      <article class="card"><div class="icon">✦</div><h3>Holo Display</h3><p>Project your world in neon. Ads, maps, and illusions on demand.</p></article>
+    </div>
+  </section>
+
+  <section id="gear">
+    <h2><span>02</span> Gear</h2>
+    <div class="grid gear">
+      <article class="card pink"><span class="price">¥ 4,200</span><h3>Mono-Blade X</h3><p>Monofilament edge, retractable, silent.</p><a href="#join" class="btn small">Acquire</a></article>
+      <article class="card pink"><span class="price">¥ 9,800</span><h3>Cyberdeck Z9</h3><p>Hand-built deck with 12-core quantum rig.</p><a href="#join" class="btn small">Acquire</a></article>
+      <article class="card pink"><span class="price">¥ 2,750</span><h3>Optic Mk.IV</h3><p>Thermal, zoom, and targeting overlay eyes.</p><a href="#join" class="btn small">Acquire</a></article>
+    </div>
+  </section>
+
+  <section id="city">
+    <h2><span>03</span> Night City</h2>
+    <div class="skyline" role="img" aria-label="Neon city skyline"><img src="assets/skyline.svg" alt=""></div>
+    <div class="stats">
+      <div><b data-count="9400000">0</b><span>Citizens</span></div>
+      <div><b data-count="1337">0</b><span>Active Hackers</span></div>
+      <div><b data-count="24">0</b><span>Hours of Neon</span></div>
+    </div>
+  </section>
+
+  <section id="join">
+    <h2><span>04</span> Jack In</h2>
+    <form class="form" id="form">
+      <input type="text" placeholder="HANDLE" required>
+      <input type="email" placeholder="ENCRYPTED MAIL" required>
+      <button class="btn" type="submit">Transmit</button>
+      <p id="msg" class="msg"></p>
+    </form>
+  </section>
+</main>
+
+<footer>© 2077 NEON//GRID · All your base are belong to us</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
