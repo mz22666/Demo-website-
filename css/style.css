@@ -36,6 +36,7 @@ nav a:not(.btn):hover{color:var(--white)}
 /* hero */
 .hero{padding:150px 0 90px;background:radial-gradient(900px 500px at 80% 0,rgba(176,38,255,.18),transparent 60%),radial-gradient(700px 400px at 0 20%,rgba(34,228,255,.1),transparent 60%)}
 .hero-in{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero-art img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .hero-art{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(255,61,139,.15)}
 .trust{display:flex;gap:34px;list-style:none;margin-top:40px;color:var(--mute);font-size:.9rem;flex-wrap:wrap}
 .trust b{display:block;color:var(--white);font-size:1.3rem}
