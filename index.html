@@ -3,77 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BUTT CO — Cyberpunk</title>
+<title>BUTT CO — Next-Generation Cyber Systems</title>
+<meta name="description" content="BUTT CO builds secure neural interfaces, quantum power cores and stealth networking for the modern megacity.">
 <link rel="icon" href="assets/logo.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<canvas id="rain" aria-hidden="true"></canvas>
-<div class="scanlines" aria-hidden="true"></div>
-
-<header class="nav">
-  <a class="brand glitch" data-text="BUTT CO" href="#top"><img src="assets/logo.svg" alt="" width="28" height="28">BUTT CO</a>
-  <nav>
-    <a href="#features">Systems</a>
-    <a href="#gear">Gear</a>
-    <a href="#city">Night City</a>
-    <a href="#join" class="btn small">Jack In</a>
-  </nav>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="30" height="30"><span>BUTT<b>CO</b></span></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" id="burger"><i></i><i></i><i></i></button>
+    <nav id="menu">
+      <a href="#solutions">Solutions</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Customers</a>
+      <a href="#contact" class="btn btn-sm">Request Access</a>
+    </nav>
+  </div>
 </header>
 
 <main id="top">
   <section class="hero">
-    <p class="tag">// SYSTEM ONLINE · 2077</p>
-    <h1 class="glitch" data-text="WAKE UP, SAMURAI">WAKE UP, SAMURAI</h1>
-    <p class="sub">The city never sleeps. Neither do we. Upgrade your chrome, hack the grid, and own the night.</p>
-    <div class="cta">
-      <a href="#join" class="btn">Enter the Grid</a>
-      <a href="#features" class="btn alt">Explore</a>
-    </div>
-    <p class="typing" id="typing"></p>
-  </section>
-
-  <section id="features">
-    <h2><span>01</span> Systems</h2>
-    <div class="grid">
-      <article class="card"><div class="icon">⌬</div><h3>Neural Link</h3><p>Zero-latency interface straight into your cortex. Think it, and the net obeys.</p></article>
-      <article class="card"><div class="icon">⚡</div><h3>Quantum Core</h3><p>Overclocked power cells that outlast any blackout in the sprawl.</p></article>
-      <article class="card"><div class="icon">☢</div><h3>Ghost Protocol</h3><p>Military-grade ICE-breaking and trace-wiping. Leave no footprint.</p></article>
-      <article class="card"><div class="icon">✦</div><h3>Holo Display</h3><p>Project your world in neon. Ads, maps, and illusions on demand.</p></article>
-    </div>
-  </section>
-
-  <section id="gear">
-    <h2><span>02</span> Gear</h2>
-    <div class="grid gear">
-      <article class="card pink"><span class="price">¥ 4,200</span><h3>Mono-Blade X</h3><p>Monofilament edge, retractable, silent.</p><a href="#join" class="btn small">Acquire</a></article>
-      <article class="card pink"><span class="price">¥ 9,800</span><h3>Cyberdeck Z9</h3><p>Hand-built deck with 12-core quantum rig.</p><a href="#join" class="btn small">Acquire</a></article>
-      <article class="card pink"><span class="price">¥ 2,750</span><h3>Optic Mk.IV</h3><p>Thermal, zoom, and targeting overlay eyes.</p><a href="#join" class="btn small">Acquire</a></article>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <span class="eyebrow">Secure systems for the modern megacity</span>
+        <h1>Engineering the <em>future</em> of connected intelligence.</h1>
+        <p class="lead">BUTT CO designs neural interfaces, quantum power infrastructure and stealth networking trusted by operators across the sprawl.</p>
+        <div class="cta">
+          <a href="#contact" class="btn">Get started</a>
+          <a href="#solutions" class="btn btn-ghost">Explore solutions</a>
+        </div>
+        <ul class="trust">
+          <li><b>99.99%</b> uptime</li>
+          <li><b>256-bit</b> encryption</li>
+          <li><b>24/7</b> operations</li>
+        </ul>
+      </div>
+      <div class="hero-art"><img src="assets/skyline.svg" alt="Neon city skyline at night"></div>
     </div>
   </section>
 
-  <section id="city">
-    <h2><span>03</span> Night City</h2>
-    <div class="skyline" role="img" aria-label="Neon city skyline"><img src="assets/skyline.svg" alt=""></div>
-    <div class="stats">
-      <div><b data-count="9400000">0</b><span>Citizens</span></div>
-      <div><b data-count="1337">0</b><span>Active Hackers</span></div>
-      <div><b data-count="24">0</b><span>Hours of Neon</span></div>
+  <section class="logos" aria-label="Trusted by">
+    <div class="wrap">
+      <p>Trusted by teams at</p>
+      <div class="logo-row"><span>ARASAKA</span><span>MILITECH</span><span>KANG TAO</span><span>NETWATCH</span><span>BIOTECH</span></div>
     </div>
   </section>
 
-  <section id="join">
-    <h2><span>04</span> Jack In</h2>
-    <form class="form" id="form">
-      <input type="text" placeholder="HANDLE" required>
-      <input type="email" placeholder="ENCRYPTED MAIL" required>
-      <button class="btn" type="submit">Transmit</button>
-      <p id="msg" class="msg"></p>
-    </form>
+  <section id="solutions" class="section">
+    <div class="wrap">
+      <header class="sec-head"><span class="eyebrow">Solutions</span><h2>Everything you need to operate in the dark.</h2><p>Four integrated platforms, engineered to work together or deploy on their own.</p></header>
+      <div class="grid g4">
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div><h3>Neural Link</h3><p>Low-latency brain-computer interface with end-to-end encrypted signal routing.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Quantum Core</h3><p>High-density power cells with self-healing grid failover for critical sites.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Ghost Protocol</h3><p>Adaptive intrusion defence and trace-free networking, monitored around the clock.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Holo Display</h3><p>Volumetric visualisation for command centres, retail and public spaces.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section alt">
+    <div class="wrap">
+      <header class="sec-head"><span class="eyebrow">Products</span><h2>Hardware built to be relied on.</h2><p>Flagship units from the BUTT CO lineup. Volume pricing available.</p></header>
+      <div class="grid g3">
+        <article class="card product"><div class="badge">Bestseller</div><h3>Cyberdeck Z9</h3><p>12-core quantum rig in a hand-finished chassis.</p><div class="row"><span class="price">¥9,800</span><a href="#contact" class="btn btn-sm btn-ghost">Enquire</a></div></article>
+        <article class="card product"><div class="badge">New</div><h3>Optic Mk.IV</h3><p>Thermal, zoom and targeting overlay in a compact optic.</p><div class="row"><span class="price">¥2,750</span><a href="#contact" class="btn btn-sm btn-ghost">Enquire</a></div></article>
+        <article class="card product"><div class="badge">Pro</div><h3>Mono-Blade X</h3><p>Monofilament edge tooling with silent retraction.</p><div class="row"><span class="price">¥4,200</span><a href="#contact" class="btn btn-sm btn-ghost">Enquire</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap about">
+      <div>
+        <span class="eyebrow">About BUTT CO</span>
+        <h2>Built in the city that never switches off.</h2>
+        <p>Since 2051 we have shipped secure, reliable technology to operators who cannot afford downtime. Our engineers, security researchers and designers work as one team to turn hard problems into dependable products.</p>
+        <ul class="ticks"><li>ISO-grade security practices</li><li>Dedicated support engineers</li><li>Global logistics and on-site installation</li></ul>
+      </div>
+      <div class="stats">
+        <div><b data-count="9400000">0</b><span>Citizens served</span></div>
+        <div><b data-count="1337">0</b><span>Enterprise clients</span></div>
+        <div><b data-count="26">0</b><span>Years of operation</span></div>
+        <div><b data-count="48">0</b><span>Districts covered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section alt">
+    <div class="wrap">
+      <header class="sec-head"><span class="eyebrow">Customers</span><h2>What operators say.</h2></header>
+      <div class="grid g3">
+        <figure class="card quote"><blockquote>“We cut incident response time in half after moving to Ghost Protocol.”</blockquote><figcaption><b>R. Vance</b><span>Head of Security, Netwatch</span></figcaption></figure>
+        <figure class="card quote"><blockquote>“Quantum Core kept our district online through three blackouts.”</blockquote><figcaption><b>M. Okafor</b><span>Infrastructure Lead, Kang Tao</span></figcaption></figure>
+        <figure class="card quote"><blockquote>“The best-supported hardware we have ever deployed. Genuinely.”</blockquote><figcaption><b>J. Silva</b><span>CTO, Biotech Group</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap contact">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2>Request access to the platform.</h2>
+        <p>Tell us about your deployment and a solutions engineer will reply within one business day.</p>
+      </div>
+      <form class="form" id="form" novalidate>
+        <label>Name<input name="name" type="text" required autocomplete="name"></label>
+        <label>Work email<input name="email" type="email" required autocomplete="email"></label>
+        <label>How can we help?<textarea name="msg" rows="4"></textarea></label>
+        <button class="btn" type="submit">Send request</button>
+        <p id="msg" class="msg" role="status"></p>
+      </form>
+    </div>
   </section>
 </main>
 
-<footer>© 2077 BUTT CO · All your base are belong to us</footer>
+<footer class="footer">
+  <div class="wrap foot-in">
+    <div><a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="26" height="26"><span>BUTT<b>CO</b></span></a><p>Secure systems for the modern megacity.</p></div>
+    <div><h4>Company</h4><a href="#about">About</a><a href="#testimonials">Customers</a><a href="#contact">Contact</a></div>
+    <div><h4>Solutions</h4><a href="#solutions">Neural Link</a><a href="#solutions">Quantum Core</a><a href="#solutions">Ghost Protocol</a></div>
+    <div><h4>Legal</h4><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Security</a></div>
+  </div>
+  <div class="wrap copy">© 2077 BUTT CO. All rights reserved.</div>
+</footer>
 <script src="js/main.js"></script>
 </body>
 </html>
